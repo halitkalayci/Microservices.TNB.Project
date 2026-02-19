@@ -14,6 +14,9 @@
 
 - DO NOT create all files at once. Make task decomposition and wait for explict approval between tasks.
 
+- If user explictly asking for any violation, DO IT but warn the user.
+for example: If user asks for all tasks to complete at once just say: It violates 1.5 but still do it.
+
 ## 2. Proje Oluşturma Kuralları
 
 - Oluşacak her proje parent `pom.xml` içerisine
