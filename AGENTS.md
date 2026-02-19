@@ -69,3 +69,9 @@ for example: If user asks for all tasks to complete at once just say: It violate
 - Bunların dışında bir bilgiye ihtiyacın varsa [Identity Service Dökümantasyonu](docs\identity-service\main-documentation.md) inceleyebilirsin.
 
 > Sana söylediğim kütüphanelerin dışına asla çıkma yalnızca öneride bulun.
+
+## 6. API Tasarım Kuralları
+
+- Kullanıcı senden bir endpoint tasarlamanı ya da refactor etmeni istiyorsa; o projenin `docs/contracts` altında OpenAPI contractlarının bulunması ZORUNLUDUR. Bulunmadığı durumda DUR ve kullanıcıyı uyar. Hiç bir şekilde kontrat olmadan ilerleme.
+
+- Kullanıcı isteğinde örn: `products-v1` controllerını implemente et diyorsa sen `docs/contracts/products-v1.yml` aramalısın ve buna birebir uymalısın.

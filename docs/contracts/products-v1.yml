@@ -1,0 +1,78 @@
+openapi: 3.0.3
+info:
+  title: Products API v1
+  version: 1.0.0
+
+paths:
+  /api/v1/products:
+    get:
+			summary: Get paginated list of products
+			operationId: getProductsV1
+			parameters:
+				- name: page
+					in: query
+					description: Zero-based page index
+					required: false
+					schema:
+						type: integer
+				- name: size
+					in: query
+					description: Page size (number of items per page)
+					required: false
+					schema:
+						type: integer
+			responses:
+				'200':
+					description: Successful paginated product list
+					content:
+						application/json:
+							schema:
+								$ref: '#/components/schemas/PagedProductsResponse'
+				'400':
+					description: Invalid pagination parameters
+
+components:
+	schemas:
+		Product:
+			type: object
+			properties:
+				id:
+					type: string
+					format: uuid
+				name:
+					type: string
+				unitPrice:
+					type: number
+				stock:
+					type: integer
+				sku:
+					type: string
+			required:
+				- id
+				- name
+				- unitPrice
+				- stock
+				- sku
+
+		PagedProductsResponse:
+			type: object
+			properties:
+				items:
+					type: array
+					items:
+						$ref: '#/components/schemas/Product'
+				page:
+					type: integer
+				size:
+					type: integer
+				totalElements:
+					type: integer
+				totalPages:
+					type: integer
+			required:
+				- items
+				- page
+				- size
+				- totalElements
+				- totalPages
+
