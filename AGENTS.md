@@ -23,4 +23,15 @@
 
 - Eğer bir konuda bilginin yetersiz olduğunu düşünüyorsan yaptığın işleme göre aşağıdaki listeden ilgili işlemin dökümantasyonunu incele:
   
-  - Gateway: `docs/gateway/gateway-doc.md` 
+- Gateway: `docs/gateway/gateway-doc.md` 
+
+
+## 4. Çıktı Formatı
+
+Çıktı formatı olarak promptta verilen çıktı formatı korunsun, eğer istenmedi ise bile aşağıdaki alanlar çıktı formatına eklensin.
+
+- Dosya Dökümü
+
+- Yapılan işlemin (varsa) test akışı
+
+- Varsa kullanılan/değiştirilen kütüphaneler
