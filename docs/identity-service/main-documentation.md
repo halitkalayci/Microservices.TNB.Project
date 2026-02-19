@@ -6,4 +6,4 @@ Bu dosya `identity-service` projesi için genel geçer dökümantasyon görevi g
 
 ## 1- JWT oluşturma
 
-- `jjwt` ve alt kütüphaneleri kullanılmalıdır.
+- `Spring Authorization Server` ve alt kütüphaneleri kullanılmalıdır.

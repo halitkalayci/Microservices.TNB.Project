@@ -12,6 +12,8 @@
 
 - Do not try to execute any shell command, if you need any output from any command ASK user to execute it.
 
+- DO NOT create all files at once. Make task decomposition and wait for explict approval between tasks.
+
 ## 2. Proje Oluşturma Kuralları
 
 - Oluşacak her proje parent `pom.xml` içerisine
