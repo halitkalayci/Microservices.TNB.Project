@@ -1,5 +1,7 @@
 ## E-Commerce Microservices Project Governance File
 
+
+
 ## 1. Çalışma Prensipleri
 
 - Do NOT ADD anything without explict approval. 
@@ -17,3 +19,8 @@
 
 - Proje isimlendirme kuralları `com.microservices.tnb.` + proje ismi olmalıdır.
 
+## 3. Özel Dökümantasyon Dosyaları
+
+- Eğer bir konuda bilginin yetersiz olduğunu düşünüyorsan yaptığın işleme göre aşağıdaki listeden ilgili işlemin dökümantasyonunu incele:
+  
+  - Gateway: `docs/gateway/gateway-doc.md` 
