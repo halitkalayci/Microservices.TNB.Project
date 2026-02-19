@@ -8,11 +8,12 @@
 
 - If you have anything new; STOP and ASK.
 
+- Do not try to execute any shell command, if you need any output from any command ASK user to execute it.
+
 ## 2. Proje Oluşturma Kuralları
 
 - Oluşacak her proje parent `pom.xml` içerisine
 `module` olarak eklenmelidir.
 
-- Proje isimlendirme kuralları `com.microservices.tnb.`+proje ismi olmalıdır.
+- Proje isimlendirme kuralları `com.microservices.tnb.` + proje ismi olmalıdır.
 
-- Bir endpoint oluşturman gerekiyorsa o servis için `docs/openapi/` kontrat dosyalarını ara. Eğer kontrat oluşturulmamış ise dur ve kullanıcıyı uyar.
