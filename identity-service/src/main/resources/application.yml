@@ -28,9 +28,8 @@ spring:
 # JWT Configuration
 app:
   jwt:
-    secret: Z3J5cHRvLW1pY3Jvc2VydmljZXMtdG5iLXNlY3VyaXR5LWtleS0yMDI2LXByb2plY3Q=
-    access-token-expiration: 900000
-    refresh-token-expiration: 86400000
+    access-token-expiration: 900000     # 15 dakika
+    refresh-token-expiration: 86400000  # 1 gün
 
 # Actuator
 management:

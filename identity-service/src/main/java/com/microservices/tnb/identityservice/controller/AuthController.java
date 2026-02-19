@@ -6,6 +6,7 @@ import com.microservices.tnb.identityservice.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,5 +28,10 @@ public class AuthController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(ApiResponse.success("Kullanıcı başarıyla oluşturuldu."));
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity<ApiResponse<Void>> test() {
+        return ResponseEntity.ok(ApiResponse.success("UP"));
     }
 }
