@@ -1,0 +1,16 @@
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\config\AuthorizationServerConfig.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\config\SecurityConfig.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\controller\AuthController.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\dto\ApiResponse.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\dto\RegisterRequest.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\entity\OperationClaim.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\entity\User.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\entity\UserOperationClaim.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\exception\GlobalExceptionHandler.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\IdentityServiceApplication.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\repository\OperationClaimRepository.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\repository\UserOperationClaimRepository.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\repository\UserRepository.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\security\JwtTokenCustomizer.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\service\CustomUserDetailsService.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\identity-service\src\main\java\com\microservices\tnb\identityservice\service\UserService.java

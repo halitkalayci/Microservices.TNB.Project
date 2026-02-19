@@ -1,0 +1,16 @@
+com\microservices\tnb\identityservice\controller\AuthController.class
+com\microservices\tnb\identityservice\config\SecurityConfig.class
+com\microservices\tnb\identityservice\entity\User.class
+com\microservices\tnb\identityservice\service\CustomUserDetailsService.class
+com\microservices\tnb\identityservice\service\UserService.class
+com\microservices\tnb\identityservice\security\JwtTokenCustomizer.class
+com\microservices\tnb\identityservice\repository\UserRepository.class
+com\microservices\tnb\identityservice\IdentityServiceApplication.class
+com\microservices\tnb\identityservice\entity\OperationClaim.class
+com\microservices\tnb\identityservice\repository\UserOperationClaimRepository.class
+com\microservices\tnb\identityservice\repository\OperationClaimRepository.class
+com\microservices\tnb\identityservice\dto\RegisterRequest.class
+com\microservices\tnb\identityservice\exception\GlobalExceptionHandler.class
+com\microservices\tnb\identityservice\config\AuthorizationServerConfig.class
+com\microservices\tnb\identityservice\dto\ApiResponse.class
+com\microservices\tnb\identityservice\entity\UserOperationClaim.class

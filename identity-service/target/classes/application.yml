@@ -1,0 +1,43 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: identity-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/identity_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
+
+# JWT Configuration
+app:
+  jwt:
+    secret: Z3J5cHRvLW1pY3Jvc2VydmljZXMtdG5iLXNlY3VyaXR5LWtleS0yMDI2LXByb2plY3Q=
+    access-token-expiration: 900000
+    refresh-token-expiration: 86400000
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
