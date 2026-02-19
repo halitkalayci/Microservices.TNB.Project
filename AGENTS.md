@@ -26,6 +26,15 @@ for example: If user asks for all tasks to complete at once just say: It violate
 
 - Her projede kesinlikle `spring-boot-actuator` bağımlılığı kullanılmalıdır.
 
+- Üçüncü taraf uygulamalar (veritabanı, message broker, cache vb.) 
+  proje kökündeki `docker-compose.yml` dosyası üzerinden yönetilmelidir.
+
+- Her yeni üçüncü taraf bağımlılığı eklendiğinde `docker-compose.yml` 
+  güncellenmeli, bağlantı bilgileri ilgili servisin `application.yml` 
+  dosyasıyla tutarlı olmalıdır.
+
+- Container isimlendirme kuralı: `tnb-` + uygulama ismi (örn: `tnb-postgres`)
+
 ## 3. Özel Dökümantasyon Dosyaları
 
 - Eğer bir konuda bilginin yetersiz olduğunu düşünüyorsan yaptığın işleme göre aşağıdaki listeden ilgili işlemin dökümantasyonunu incele:
@@ -58,3 +67,5 @@ for example: If user asks for all tasks to complete at once just say: It violate
 - JWT oluşturacak secret şimdilik `application.yml` da min. 256 bit olacak şekilde tanımlanmalıdır.
 
 - Bunların dışında bir bilgiye ihtiyacın varsa [Identity Service Dökümantasyonu](docs\identity-service\main-documentation.md) inceleyebilirsin.
+
+> Sana söylediğim kütüphanelerin dışına asla çıkma yalnızca öneride bulun.
