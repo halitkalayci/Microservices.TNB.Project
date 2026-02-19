@@ -19,6 +19,8 @@
 
 - Proje isimlendirme kuralları `com.microservices.tnb.` + proje ismi olmalıdır.
 
+- Her projede kesinlikle `spring-boot-actuator` bağımlılığı kullanılmalıdır.
+
 ## 3. Özel Dökümantasyon Dosyaları
 
 - Eğer bir konuda bilginin yetersiz olduğunu düşünüyorsan yaptığın işleme göre aşağıdaki listeden ilgili işlemin dökümantasyonunu incele:
@@ -35,3 +37,19 @@
 - Yapılan işlemin (varsa) test akışı
 
 - Varsa kullanılan/değiştirilen kütüphaneler
+
+- Varsa bu implementasyonla ilgili öneri veya bulduğun eksikleri raporla.
+
+## 5. Yetkilendirme Kuralları
+
+- JWT ile stateless bir yetkilendirme sistemi olmak zorundadır.
+
+- JWT oluşturma işlemi `PKCE` akışını kullanmak zorundadır.
+
+- JWT `15` dakika Refresh Token `1` gün olmak zorundadır.
+
+- Refresh Tokenlar her kullanıldığında rotate edilmek zorundadır.
+
+- JWT oluşturacak secret şimdilik `application.yml` da min. 256 bit olacak şekilde tanımlanmalıdır.
+
+- Bunların dışında bir bilgiye ihtiyacın varsa [Identity Service Dökümantasyonu](docs\identity-service\main-documentation.md) inceleyebilirsin.
