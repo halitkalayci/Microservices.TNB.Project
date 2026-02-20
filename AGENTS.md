@@ -35,6 +35,8 @@ for example: If user asks for all tasks to complete at once just say: It violate
 
 - Container isimlendirme kuralı: `tnb-` + uygulama ismi (örn: `tnb-postgres`)
 
+- Her yeni proje swagger implementasyonu yapmalıdır. Swagger endpointleri securityde permitAll edilmelidir.
+
 ## 3. Özel Dökümantasyon Dosyaları
 
 - Eğer bir konuda bilginin yetersiz olduğunu düşünüyorsan yaptığın işleme göre aşağıdaki listeden ilgili işlemin dökümantasyonunu incele:
