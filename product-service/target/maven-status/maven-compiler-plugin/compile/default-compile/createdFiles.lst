@@ -1,6 +1,6 @@
 com\microservices\tnb\productservice\dto\ProductResponse.class
 com\microservices\tnb\productservice\api\ProductController.class
-com\microservices\tnb\productservice\ProductServiceApplication.class
 com\microservices\tnb\productservice\service\ProductQueryService.class
+com\microservices\tnb\productservice\ProductServiceApplication.class
 com\microservices\tnb\productservice\dto\PagedProductsResponse.class
 com\microservices\tnb\productservice\OpenApiConfig.class

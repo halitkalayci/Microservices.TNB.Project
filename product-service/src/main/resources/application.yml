@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: product-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9000/oauth2/jwks
   datasource:
     url: jdbc:postgresql://localhost:5432/identity_db
     username: postgres

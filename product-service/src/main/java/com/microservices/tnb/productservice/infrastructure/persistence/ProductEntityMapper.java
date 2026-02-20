@@ -16,7 +16,8 @@ public class ProductEntityMapper {
                 product.getName(),
                 product.getUnitPrice(),
                 product.getStock(),
-                product.getSku()
+                product.getSku(),
+                product.getCreatedBy()
         );
     }
 
@@ -29,7 +30,8 @@ public class ProductEntityMapper {
                 entity.getName(),
                 entity.getUnitPrice(),
                 entity.getStock(),
-                entity.getSku()
+                entity.getSku(),
+                entity.getCreatedBy()
         );
     }
 }

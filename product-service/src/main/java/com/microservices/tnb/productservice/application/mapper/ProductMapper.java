@@ -26,7 +26,8 @@ public class ProductMapper {
                 request.getName(),
                 request.getUnitPrice(),
                 request.getStock(),
-                request.getSku()
+                request.getSku(),
+                null
         );
     }
 
@@ -39,7 +40,8 @@ public class ProductMapper {
                 request.getName(),
                 request.getUnitPrice(),
                 request.getStock(),
-                request.getSku()
+                request.getSku(),
+                null
         );
     }
 

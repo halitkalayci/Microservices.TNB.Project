@@ -17,6 +17,8 @@ C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\c
 C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\infrastructure\persistence\ProductEntityMapper.java
 C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\infrastructure\persistence\ProductRepositoryAdapter.java
 C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\infrastructure\persistence\SpringDataProductRepository.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\infrastructure\security\ProductSecurityService.java
+C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\infrastructure\security\SecurityConfig.java
 C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\OpenApiConfig.java
 C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\ProductServiceApplication.java
 C:\Users\Halit\Desktop\Microservices.TNB.Project\product-service\src\main\java\com\microservices\tnb\productservice\service\ProductQueryService.java

@@ -30,15 +30,19 @@ public class ProductEntity {
     @Column(nullable = false, unique = true)
     private String sku;
 
+    @Column(name = "created_by", nullable = true)
+    private String createdBy;
+
     public ProductEntity() {
     }
 
-    public ProductEntity(UUID id, String name, BigDecimal unitPrice, Integer stock, String sku) {
+    public ProductEntity(UUID id, String name, BigDecimal unitPrice, Integer stock, String sku, String createdBy) {
         this.id = id;
         this.name = name;
         this.unitPrice = unitPrice;
         this.stock = stock;
         this.sku = sku;
+        this.createdBy = createdBy;
     }
 
     public UUID getId() {
@@ -79,5 +83,13 @@ public class ProductEntity {
 
     public void setSku(String sku) {
         this.sku = sku;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 }

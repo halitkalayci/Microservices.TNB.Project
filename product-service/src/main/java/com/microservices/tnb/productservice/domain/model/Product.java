@@ -10,16 +10,18 @@ public class Product {
     private BigDecimal unitPrice;
     private Integer stock;
     private String sku;
+    private String createdBy;
 
     public Product() {
     }
 
-    public Product(UUID id, String name, BigDecimal unitPrice, Integer stock, String sku) {
+    public Product(UUID id, String name, BigDecimal unitPrice, Integer stock, String sku, String createdBy) {
         this.id = id;
         this.name = name;
         this.unitPrice = unitPrice;
         this.stock = stock;
         this.sku = sku;
+        this.createdBy = createdBy;
     }
 
     public UUID getId() {
@@ -60,5 +62,13 @@ public class Product {
 
     public void setSku(String sku) {
         this.sku = sku;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 }

@@ -33,10 +33,12 @@ public class ProductRepositoryAdapter implements ProductCommandPort, ProductQuer
         if (product.getId() == null) {
             return Optional.empty();
         }
-        if (!repository.existsById(product.getId())) {
+        Optional<ProductEntity> existingOpt = repository.findById(product.getId());
+        if (existingOpt.isEmpty()) {
             return Optional.empty();
         }
         ProductEntity entity = ProductEntityMapper.toEntity(product);
+        entity.setCreatedBy(existingOpt.get().getCreatedBy());
         ProductEntity saved = repository.save(entity);
         return Optional.ofNullable(ProductEntityMapper.toDomain(saved));
     }
