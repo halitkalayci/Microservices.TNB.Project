@@ -359,14 +359,15 @@ public class AuthService {
     }
 
     private String extractCsrfToken(String html) {
-        // Search for <input type="hidden" name="_csrf" value="TOKEN"/>
-        Pattern pattern = Pattern.compile("name=\"_csrf\"\\s+value=\"([^\"]+)\"");
+        // Search for <input name="_csrf" type="hidden" value="TOKEN"/>
+        // Use [^>]* to skip over any intermediate attributes (e.g. type="hidden")
+        Pattern pattern = Pattern.compile("name=\"_csrf\"[^>]*value=\"([^\"]+)\"");
         Matcher matcher = pattern.matcher(html);
         if (matcher.find()) {
             return matcher.group(1);
         }
-        // Try alternate pattern
-        Pattern pattern2 = Pattern.compile("value=\"([^\"]+)\"\\s+name=\"_csrf\"");
+        // Try alternate pattern (value before name)
+        Pattern pattern2 = Pattern.compile("value=\"([^\"]+)\"[^>]*name=\"_csrf\"");
         Matcher matcher2 = pattern2.matcher(html);
         if (matcher2.find()) {
             return matcher2.group(1);
