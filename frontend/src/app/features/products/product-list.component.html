@@ -1,0 +1,76 @@
+<div class="products-container">
+  <div class="products-header">
+    <h2>Ürünler</h2>
+    <span class="total-badge" *ngIf="!loading">Toplam: {{ totalElements }} ürün</span>
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading" *ngIf="loading">
+    <div class="spinner"></div>
+    <p>Ürünler yükleniyor...</p>
+  </div>
+
+  <!-- Error State -->
+  <div class="alert alert-error" *ngIf="errorMessage">
+    {{ errorMessage }}
+    <button class="btn-retry" (click)="loadProducts()">Tekrar Dene</button>
+  </div>
+
+  <!-- Products Table -->
+  <div class="table-wrapper" *ngIf="!loading && !errorMessage">
+    <table class="products-table" *ngIf="products.length > 0">
+      <thead>
+        <tr>
+          <th>Ürün Adı</th>
+          <th>SKU</th>
+          <th>Birim Fiyat</th>
+          <th>Stok</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td class="product-name">{{ product.name }}</td>
+          <td><code>{{ product.sku }}</code></td>
+          <td class="price">{{ product.unitPrice | number: '1.2-2' }} ₺</td>
+          <td>
+            <span class="stock-badge" [class.low-stock]="product.stock < 10">
+              {{ product.stock }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="empty-state" *ngIf="products.length === 0">
+      <p>Henüz ürün bulunmuyor.</p>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" *ngIf="totalPages > 1">
+      <button
+        class="page-btn"
+        (click)="previousPage()"
+        [disabled]="currentPage === 0"
+      >
+        &laquo; Önceki
+      </button>
+
+      <button
+        *ngFor="let page of pages"
+        class="page-btn"
+        [class.active]="page === currentPage"
+        (click)="goToPage(page)"
+      >
+        {{ page + 1 }}
+      </button>
+
+      <button
+        class="page-btn"
+        (click)="nextPage()"
+        [disabled]="currentPage >= totalPages - 1"
+      >
+        Sonraki &raquo;
+      </button>
+    </div>
+  </div>
+</div>

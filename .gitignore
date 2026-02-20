@@ -1,0 +1,64 @@
+# ========================
+# Java / Maven
+# ========================
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# ========================
+# IDE
+# ========================
+.idea/
+**/.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+**/.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+**/.settings/
+.factorypath
+
+# ========================
+# Spring Boot
+# ========================
+**/*.log
+**/spring-boot-devtools.properties
+
+# ========================
+# Node / Angular
+# ========================
+**/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# OS
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# Docker
+# ========================
+docker/data/
+
+# ========================
+# Environment / Secrets
+# ========================
+*.env
+.env.*

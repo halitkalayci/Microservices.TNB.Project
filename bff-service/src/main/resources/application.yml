@@ -1,0 +1,40 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: bff-service
+
+# BFF Configuration
+bff:
+  gateway-url: http://localhost:8888
+  identity-url: http://localhost:9000
+  oauth2:
+    client-id: web-client
+    client-secret: web-secret
+    redirect-uri: http://localhost:8090/auth/callback
+    scopes: openid,profile
+
+# CORS
+  allowed-origins: http://localhost:4200
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
