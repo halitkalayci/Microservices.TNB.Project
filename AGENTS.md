@@ -75,3 +75,16 @@ for example: If user asks for all tasks to complete at once just say: It violate
 - Kullanıcı senden bir endpoint tasarlamanı ya da refactor etmeni istiyorsa; o projenin `docs/contracts` altında OpenAPI contractlarının bulunması ZORUNLUDUR. Bulunmadığı durumda DUR ve kullanıcıyı uyar. Hiç bir şekilde kontrat olmadan ilerleme.
 
 - Kullanıcı isteğinde örn: `products-v1` controllerını implemente et diyorsa sen `docs/contracts/products-v1.yml` aramalısın ve buna birebir uymalısın.
+
+## 7. Request / Response DTO Kuralları
+
+- Her endpoint için request ve response DTO'ları KULLANIM AMAÇLARINA GÖRE ÖZEL TANIMLANMALIDIR.
+
+- Aynı DTO'yu birden fazla endpoint için HEM request HEM response olarak KULLANMA.
+
+- Mümkün olduğunca her use-case için ayrı DTO kullan:
+  - Örnek: `CreateProductRequest` / `CreateProductResponse`, `GetProductByIdResponse`, `UpdateProductResponse`, `DeleteProductResponse` gibi.
+
+- Contract (OpenAPI) tek bir `schema` (örneğin `Product`) tanımlasa bile, controller seviyesinde bu şemayı temsil eden DTO'lar use-case bazlı ayrılmalıdır. JSON alan isimleri kontratla birebir uyumlu olmalı, ancak Java sınıf isimleri ve kullanıldıkları endpointler özel olmalıdır.
+
+- Entity sınıflarını doğrudan request veya response olarak KULLANMA; her zaman DTO kullan.

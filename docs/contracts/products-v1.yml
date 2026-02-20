@@ -31,6 +31,101 @@ paths:
 				'400':
 					description: Invalid pagination parameters
 
+		post:
+			summary: Create a new product
+			operationId: createProductV1
+			requestBody:
+				required: true
+				content:
+					application/json:
+						schema:
+							$ref: '#/components/schemas/ProductCreateRequest'
+			responses:
+				'201':
+					description: Product created successfully
+					content:
+						application/json:
+							schema:
+								$ref: '#/components/schemas/Product'
+				'400':
+					description: Invalid product data
+				'409':
+					description: SKU already exists
+
+  /api/v1/products/{id}:
+		get:
+			summary: Get product by id
+			operationId: getProductByIdV1
+			parameters:
+				- name: id
+					in: path
+					description: Product identifier
+					required: true
+					schema:
+						type: string
+						format: uuid
+			responses:
+				'200':
+					description: Product found
+					content:
+						application/json:
+							schema:
+								$ref: '#/components/schemas/Product'
+				'400':
+					description: Invalid product id
+				'404':
+					description: Product not found
+
+		put:
+			summary: Update an existing product
+			operationId: updateProductV1
+			parameters:
+				- name: id
+					in: path
+					description: Product identifier
+					required: true
+					schema:
+						type: string
+						format: uuid
+			requestBody:
+				required: true
+				content:
+					application/json:
+						schema:
+							$ref: '#/components/schemas/ProductUpdateRequest'
+			responses:
+				'200':
+					description: Product updated successfully
+					content:
+						application/json:
+							schema:
+								$ref: '#/components/schemas/Product'
+				'400':
+					description: Invalid product data
+				'404':
+					description: Product not found
+
+		delete:
+			summary: Delete a product
+			operationId: deleteProductV1
+			parameters:
+				- name: id
+					in: path
+					description: Product identifier
+					required: true
+					schema:
+						type: string
+						format: uuid
+			responses:
+				'200':
+					description: Product deleted successfully
+					content:
+						application/json:
+							schema:
+								$ref: '#/components/schemas/DeleteProductResponse'
+				'404':
+					description: Product not found
+
 components:
 	schemas:
 		Product:
@@ -75,4 +170,47 @@ components:
 				- size
 				- totalElements
 				- totalPages
+
+		ProductCreateRequest:
+			type: object
+			properties:
+				name:
+					type: string
+				unitPrice:
+					type: number
+				stock:
+					type: integer
+				sku:
+					type: string
+			required:
+				- name
+				- unitPrice
+				- stock
+				- sku
+
+		ProductUpdateRequest:
+			type: object
+			properties:
+				name:
+					type: string
+				unitPrice:
+					type: number
+				stock:
+					type: integer
+				sku:
+					type: string
+			required:
+				- name
+				- unitPrice
+				- stock
+				- sku
+
+		DeleteProductResponse:
+			type: object
+			properties:
+				id:
+					type: string
+					format: uuid
+			required:
+				- id
 
